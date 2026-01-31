@@ -6,7 +6,7 @@ def generate_random_hash():
     """HASH"""
     random_string = ''.join(random.choices(string.ascii_letters + string.digits, k=32))
     hash_object = hashlib.sha256(random_string.encode())
-    return hash_object.hexdigest()
+    return hash_object.hexdigest()[:32]
 
 def find_hash_with_two_zeros():
     
